@@ -1,5 +1,6 @@
 <!-- This is a Svelte component -->
 <script lang="ts">
+	import Code from './Code.svelte';
 	import ImageSelector from './ImageSelector.svelte';
 	import PreviewTable from './PreviewTable.svelte';
 	import Slider from './Slider.svelte';
@@ -13,6 +14,9 @@
 
 	<!-- Slider -->
 	<Slider />
+
+	<!-- Code Block -->
+	<Code />
 </div>
 
 <!-- Preview -->

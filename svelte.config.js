@@ -14,7 +14,8 @@ const config = {
 		adapter: adapter(),
 		alias: {
 			'$components/*': 'src/lib/components',
-			'$store/*': 'src/lib/store'
+			'$store/*': 'src/lib/store',
+			$constants: 'src/lib/constants'
 		}
 	}
 };

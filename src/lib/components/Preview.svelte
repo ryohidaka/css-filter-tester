@@ -20,7 +20,10 @@
 		// Update the 'image' variable to the selected image, if available.
 		if ($selectedImage) {
 			image = $selectedImage;
-			isDefaultImage.set(false)
+			isDefaultImage.set(false);
+		} else {
+			image = DEFAULT_IMAGE;
+			isDefaultImage.set(true);
 		}
 
 		// Calculate the CSS filter string using the 'getFilterString' function.

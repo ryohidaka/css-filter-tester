@@ -15,5 +15,5 @@ export function getFilterString(value: number, selectedFilter: Filter | null) {
 	if (!mode && !unit) return '';
 
 	// Construct and return the CSS filter string.
-	return `filter: ${mode}(${value}${unit})`;
+	return `filter: ${mode}(${value}${unit});`;
 }

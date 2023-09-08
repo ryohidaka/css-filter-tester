@@ -3,6 +3,7 @@
 	import { FILTERS } from '$constants';
 	import { selectedFilter } from '$store/filterStore';
 	import type { Filter } from '$types';
+	import { capitalizeFirstLetter } from '../string';
 
 	// Define a function to handle filter mode change.
 	const handleModeChange = (filter: Filter) => {
@@ -16,7 +17,9 @@
 		<!-- Button to change the filter mode -->
 		<button
 			on:click={() => handleModeChange(filter)}
-			disabled={$selectedFilter?.mode === filter.mode}>{filter.mode}</button
+			disabled={$selectedFilter?.mode === filter.mode}
 		>
+			{capitalizeFirstLetter(filter.mode)}
+		</button>
 	{/each}
 </div>

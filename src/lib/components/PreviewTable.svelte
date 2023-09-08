@@ -17,7 +17,7 @@
 			<td><Preview /></td>
 
 			<!-- Filtered Image Preview -->
-			<td><Preview /></td>
+			<td><Preview isFiltered /></td>
 		</tr>
 	</tbody>
 </table>

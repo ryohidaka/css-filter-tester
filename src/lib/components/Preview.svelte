@@ -1,23 +1,31 @@
-<!-- This is a Svelte component -->
-
-<!-- Importing the DEFAULT_IMAGE constant from the '$constants' module. -->
 <script lang="ts">
+	// Import necessary constants, stores, and functions.
 	import { DEFAULT_IMAGE } from '$constants';
-
-	// Importing the 'selectedImage' store from the '$store/imageStore'.
+	import { selectedFilter } from '$store/filterStore';
 	import { selectedImage } from '$store/imageStore';
+	import { sliderValue } from '$store/sliderStore';
+	import { getFilterString } from '../filter';
+
+	// Declare the 'isFiltered' prop with a default value of 'false'.
+	export let isFiltered = false;
 
 	// Initialize the 'image' variable with the DEFAULT_IMAGE.
 	let image = DEFAULT_IMAGE;
 
-	// Reactively update the 'image' variable when 'selectedImage' changes.
+	// Initialize the 'filterStyle' variable to store the CSS filter string.
+	let filterStyle = '';
+
+	// Reactively update the 'image' variable and 'filterStyle' when 'selectedImage' or 'sliderValue' changes.
 	$: {
 		// Update the 'image' variable to the selected image, if available.
 		if ($selectedImage) {
 			image = $selectedImage;
 		}
+
+		// Calculate the CSS filter string using the 'getFilterString' function.
+		filterStyle = getFilterString($sliderValue, $selectedFilter);
 	}
 </script>
 
 <!-- Container for displaying the image -->
-<img src={image} width="500" alt="" />
+<img src={image} width="500" alt="" style={isFiltered ? filterStyle : ''} />

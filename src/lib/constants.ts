@@ -16,6 +16,12 @@ export enum Unit {
 	Percent = '%'
 }
 
+// Define an enum for step values
+export enum FilterStep {
+	Integer = 1,
+	Float = 0.1
+}
+
 // Define a filter object with default values
 export const FILTERS = [
 	{

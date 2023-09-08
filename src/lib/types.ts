@@ -1,4 +1,4 @@
-import type { Mode, Unit } from '$constants';
+import type { Mode, Step, Unit } from '$constants';
 
 // Define the 'Filter' type, which represents filter configuration options.
 export type Filter =
@@ -8,6 +8,7 @@ export type Filter =
 			min?: number; // Optional: Minimum allowed value.
 			max?: number; // Optional: Maximum allowed value.
 			default?: number; // Optional: Default value.
+			step?: Step;
 	  }
 	| {
 			mode: Mode; // The mode of the filter (e.g., 'blur').
@@ -15,4 +16,5 @@ export type Filter =
 			min?: 0; // Minimum allowed value for '%' unit.
 			max?: 100; // Maximum allowed value for '%' unit.
 			default?: 50; // Default value for '%' unit.
+			step?: Step.Int;
 	  };

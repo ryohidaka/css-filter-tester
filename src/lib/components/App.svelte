@@ -2,6 +2,7 @@
 <script lang="ts">
 	import ImageSelector from './ImageSelector.svelte';
 	import PreviewTable from './PreviewTable.svelte';
+	import Slider from './Slider.svelte';
 </script>
 
 <h1>CSS Filter Test</h1>
@@ -9,6 +10,9 @@
 <div id="controller">
 	<!-- Image Selector -->
 	<ImageSelector />
+
+	<!-- Slider -->
+	<Slider />
 </div>
 
 <!-- Preview -->

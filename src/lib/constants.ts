@@ -7,7 +7,8 @@ export const APPLICATION_TITLE = 'CSS Filter Test';
 
 // Define an enum for filter modes
 export enum FilterMode {
-	Blur = 'blur'
+	Blur = 'blur',
+	Brightness = 'brightness'
 }
 
 // Define an enum for filter value units
@@ -30,6 +31,13 @@ export const FILTERS: Filter[] = [
 		unit: FilterUnit.Pixels,
 		min: 0,
 		max: 20
+	},
+	{
+		mode: FilterMode.Brightness,
+		unit: FilterUnit.None,
+		min: 0,
+		max: 2,
+		step: FilterStep.Float
 	}
 ];
 

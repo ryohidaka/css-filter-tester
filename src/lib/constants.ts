@@ -13,7 +13,8 @@ export enum FilterMode {
 // Define an enum for filter value units
 export enum FilterUnit {
 	Pixels = 'px',
-	Percent = '%'
+	Percent = '%',
+	None = ''
 }
 
 // Define an enum for step values

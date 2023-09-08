@@ -5,27 +5,29 @@
 	// Store imports
 	import { selectedFilter } from '$store/filterStore';
 	import { sliderValue } from '$store/sliderStore';
-	import { Step } from '$constants';
+	import { FilterStep } from '$constants';
   
 	// Constants
-	const DEFAULT_STEP = Step.Int;
+	const DEFAULT_MIN = 0;
+	const DEFAULT_MAX = 100;
+	const DEFAULT_STEP = FilterStep.Integer;
   
-	// Initialize the 'value' variable with the current value from the 'sliderValue' store.
+	// Reactive variables
 	let value = $sliderValue;
-  
-	let min = 0; // Minimum value
-	let max = 100; // Maximum value
+	let min = DEFAULT_MIN;
+	let max = DEFAULT_MAX;
 	let unit = '';
+	let step = DEFAULT_STEP;
   
 	// Initialize the 'filter' variable with the current selected filter, and 'unit' with its unit.
 	let filter = $selectedFilter;
   
 	// Reactively update 'min', 'max', 'unit', and 'step' based on the selected filter's values.
 	$: {
-		filter = $selectedFilter;
+	  filter = $selectedFilter;
 		min = filter?.min || min;
 		max = filter?.max || max;
-		unit = filter?.unit || unit;
+	  unit = filter?.unit || unit;
 	  step = filter?.step ?? DEFAULT_STEP;
 	}
   
@@ -52,7 +54,7 @@
 	<span>{min}{unit}</span>
   
 	<!-- Create an input range slider that is bound to the 'value' variable with specified 'min', 'max', and 'step' values.
-		Call the 'handleChange' function on input changes. -->
+	  Call the 'handleChange' function on input changes. -->
 	<input type="range" bind:value {min} {max} {step} on:input={handleChange} />
   
 	<!-- Display the maximum value label along with the unit if available. -->

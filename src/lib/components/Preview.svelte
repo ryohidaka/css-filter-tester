@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Import necessary constants, stores, and functions.
-	import { DEFAULT_IMAGE } from '$constants';
+	import { DEFAULT_IMAGE_URL } from '$constants';
 	import { selectedFilter } from '$store/filterStore';
 	import { isDefaultImage, selectedImage } from '$store/imageStore';
 	import { sliderValue } from '$store/sliderStore';
@@ -9,8 +9,8 @@
 	// Declare the 'isFiltered' prop with a default value of 'false'.
 	export let isFiltered = false;
 
-	// Initialize the 'image' variable with the DEFAULT_IMAGE.
-	let image = DEFAULT_IMAGE;
+	// Initialize the 'image' variable with the DEFAULT_IMAGE_URL.
+	let image = DEFAULT_IMAGE_URL;
 
 	// Initialize the 'filterStyle' variable to store the CSS filter string.
 	let filterStyle = '';
@@ -22,7 +22,7 @@
 			image = $selectedImage;
 			isDefaultImage.set(false);
 		} else {
-			image = DEFAULT_IMAGE;
+			image = DEFAULT_IMAGE_URL;
 			isDefaultImage.set(true);
 		}
 

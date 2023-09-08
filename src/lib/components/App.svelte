@@ -1,6 +1,6 @@
 <!-- This is a Svelte component -->
 <script lang="ts">
-	import { TITLE } from '$constants';
+	import { APPLICATION_TITLE } from '$constants';
 	import { selectedFilter } from '$store/filterStore';
 	import { capitalizeFirstLetter } from '../string';
 	import Code from './Code.svelte';
@@ -19,11 +19,11 @@
 </script>
 
 <svelte:head>
-	<title>{TITLE}</title>
+	<title>{APPLICATION_TITLE}</title>
 	<html lang="en" />
 </svelte:head>
 
-<h1>{TITLE}</h1>
+<h1>{APPLICATION_TITLE}</h1>
 
 <!-- Display the capitalized mode name -->
 <h2>{mode}</h2>

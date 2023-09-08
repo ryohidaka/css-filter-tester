@@ -1,12 +1,18 @@
 <!-- This is a Svelte component -->
 <script lang="ts">
+	import { TITLE } from '$constants';
 	import Code from './Code.svelte';
 	import ImageSelector from './ImageSelector.svelte';
 	import PreviewTable from './PreviewTable.svelte';
 	import Slider from './Slider.svelte';
 </script>
 
-<h1>CSS Filter Test</h1>
+<svelte:head>
+	<title>{TITLE}</title>
+	<html lang="en" />
+</svelte:head>
+
+<h1>{TITLE}</h1>
 
 <div id="controller">
 	<!-- Image Selector -->

@@ -1,8 +1,9 @@
 // Import the 'Filter' type from the '$types' module.
 import type { Filter } from '$types';
 
-// This constant represents the default image URL used in the application.
+// Constants representing default values used in the application.
 export const DEFAULT_IMAGE = 'https://source.unsplash.com/9IBqihqhuHc';
+export const TITLE = 'CSS Filter Test';
 
 // Define an enum for filter modes
 export enum Mode {

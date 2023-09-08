@@ -2,6 +2,7 @@
 <script lang="ts">
 	import { TITLE } from '$constants';
 	import Code from './Code.svelte';
+	import FilterSelector from './FilterSelector.svelte';
 	import ImageSelector from './ImageSelector.svelte';
 	import PreviewTable from './PreviewTable.svelte';
 	import Slider from './Slider.svelte';
@@ -13,6 +14,9 @@
 </svelte:head>
 
 <h1>{TITLE}</h1>
+
+<!-- Filter Selector -->
+<FilterSelector />
 
 <div id="controller">
 	<!-- Image Selector -->

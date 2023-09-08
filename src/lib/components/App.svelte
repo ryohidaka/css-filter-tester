@@ -1,11 +1,21 @@
 <!-- This is a Svelte component -->
 <script lang="ts">
 	import { TITLE } from '$constants';
+	import { selectedFilter } from '$store/filterStore';
+	import { capitalizeFirstLetter } from '../string';
 	import Code from './Code.svelte';
 	import FilterSelector from './FilterSelector.svelte';
 	import ImageSelector from './ImageSelector.svelte';
 	import PreviewTable from './PreviewTable.svelte';
 	import Slider from './Slider.svelte';
+
+	// Initialize mode with an empty string
+	let mode = '';
+
+	// Compute the capitalized mode name from selectedFilter
+	$: {
+		mode = capitalizeFirstLetter($selectedFilter?.mode || '');
+	}
 </script>
 
 <svelte:head>
@@ -14,6 +24,9 @@
 </svelte:head>
 
 <h1>{TITLE}</h1>
+
+<!-- Display the capitalized mode name -->
+<h2>{mode}</h2>
 
 <!-- Filter Selector -->
 <FilterSelector />

@@ -2,7 +2,7 @@
 	// Import necessary constants, stores, and functions.
 	import { DEFAULT_IMAGE } from '$constants';
 	import { selectedFilter } from '$store/filterStore';
-	import { selectedImage } from '$store/imageStore';
+	import { isDefaultImage, selectedImage } from '$store/imageStore';
 	import { sliderValue } from '$store/sliderStore';
 	import { getFilterString } from '../filter';
 
@@ -20,6 +20,7 @@
 		// Update the 'image' variable to the selected image, if available.
 		if ($selectedImage) {
 			image = $selectedImage;
+			isDefaultImage.set(false)
 		}
 
 		// Calculate the CSS filter string using the 'getFilterString' function.

@@ -6,3 +6,5 @@ export const selectedImage: Writable<string | null> = writable(null);
 
 // The 'selectedImage' store allows you to track and update the selected image in your Svelte application.
 // It is initialized with 'null' as the default value.
+
+export const isDefaultImage: Writable<boolean> = writable(true);

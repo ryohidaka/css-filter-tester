@@ -14,7 +14,8 @@ export enum FilterMode {
 	HueRotate = 'hue-rotate',
 	Invert = 'invert',
 	Opacity = 'opacity',
-	Saturate = 'saturate'
+	Saturate = 'saturate',
+	Sepia = 'sepia'
 }
 
 // Define an enum for filter value units
@@ -82,6 +83,13 @@ export const FILTERS: Filter[] = [
 	},
 	{
 		mode: FilterMode.Saturate,
+		unit: FilterUnit.None,
+		min: 0,
+		max: 1,
+		step: FilterStep.Float
+	},
+	{
+		mode: FilterMode.Sepia,
 		unit: FilterUnit.None,
 		min: 0,
 		max: 1,

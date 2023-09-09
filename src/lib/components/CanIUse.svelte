@@ -1,5 +1,5 @@
 <section id="can-i-use">
-	<h3>Can I Use</h3>
+	<h2>Can I Use</h2>
 
 	<picture>
 		<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-filters.webp" />

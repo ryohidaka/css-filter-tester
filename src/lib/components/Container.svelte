@@ -21,7 +21,7 @@
 </script>
 
 <section id={filter.mode}>
-	<h2>{capitalizeFirstLetter(filter.mode)}</h2>
+	<h3>{capitalizeFirstLetter(filter.mode)}</h3>
 
 	<div id="controller">
 		<!-- Slider -->

@@ -22,12 +22,17 @@
 <!-- Image Selector -->
 <ImageSelector />
 
-{#each FILTERS as filter}
-	<Container {filter} />
-{/each}
+<!-- Filters -->
+<section id="filters">
+	<h2>CSS Filters</h2>
 
-<!-- Copyright -->
-<Copyright />
+	{#each FILTERS as filter}
+		<Container {filter} />
+	{/each}
+
+	<!-- Copyright -->
+	<Copyright />
+</section>
 
 <!-- Can I Use -->
 <CanIUse />

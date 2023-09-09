@@ -1,6 +1,6 @@
 <script lang="ts">
-	// Import selectedImage and isDefaultImage from the imageStore
-	import { isDefaultImage, selectedImage } from '$store/imageStore';
+	// Import selectedImage from the imageStore
+	import { selectedImage } from '$store/imageStore';
 
 	// Define a function to handle image change
 	const handleImageChange = (event: Event) => {
@@ -33,7 +33,7 @@
 	<!-- Input element for selecting an image file -->
 	<input type="file" accept="image/*" on:change={handleImageChange} />
 
-	{#if !$isDefaultImage}
+	{#if $selectedImage}
 		<!-- Button to clear the selected image -->
 		<button on:click={clearSelectedImage}>Clear</button>
 	{/if}

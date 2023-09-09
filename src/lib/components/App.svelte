@@ -3,6 +3,7 @@
 	import { APPLICATION_TITLE } from '$constants/config';
 	import { selectedFilter } from '$store/filterStore';
 	import { capitalizeFirstLetter } from '../string';
+	import CanIUse from './CanIUse.svelte';
 	import Code from './Code.svelte';
 	import FilterSelector from './FilterSelector.svelte';
 	import ImageSelector from './ImageSelector.svelte';
@@ -44,6 +45,9 @@
 
 <!-- Preview -->
 <PreviewTable />
+
+<!-- Can I Use -->
+<CanIUse />
 
 <!-- You can add inline CSS styles here to style the component -->
 <style>

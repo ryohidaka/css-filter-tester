@@ -9,7 +9,8 @@ export const APPLICATION_TITLE = 'CSS Filter Test';
 export enum FilterMode {
 	Blur = 'blur',
 	Brightness = 'brightness',
-	Contrast = 'contrast'
+	Contrast = 'contrast',
+	Grayscale = 'grayscale'
 }
 
 // Define an enum for filter value units
@@ -45,6 +46,13 @@ export const FILTERS: Filter[] = [
 		unit: FilterUnit.None,
 		min: 0,
 		max: 2,
+		step: FilterStep.Float
+	},
+	{
+		mode: FilterMode.Grayscale,
+		unit: FilterUnit.None,
+		min: 0,
+		max: 1,
 		step: FilterStep.Float
 	}
 ];

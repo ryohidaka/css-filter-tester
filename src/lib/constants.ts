@@ -12,7 +12,8 @@ export enum FilterMode {
 	Contrast = 'contrast',
 	Grayscale = 'grayscale',
 	HueRotate = 'hue-rotate',
-	Invert = 'invert'
+	Invert = 'invert',
+	Opacity = 'opacity'
 }
 
 // Define an enum for filter value units
@@ -66,6 +67,13 @@ export const FILTERS: Filter[] = [
 	},
 	{
 		mode: FilterMode.Invert,
+		unit: FilterUnit.None,
+		min: 0,
+		max: 1,
+		step: FilterStep.Float
+	},
+	{
+		mode: FilterMode.Opacity,
 		unit: FilterUnit.None,
 		min: 0,
 		max: 1,

@@ -5,5 +5,7 @@
 </script>
 
 <Header />
-<App />
+<main>
+	<App />
+</main>
 <Footer />

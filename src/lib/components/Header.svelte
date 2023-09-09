@@ -1,5 +1,5 @@
 <script>
-	import { APPLICATION_TITLE } from '$constants/config';
+	import { APPLICATION_TITLE, DESCRIPTION } from '$constants/config';
 </script>
 
 <header>
@@ -8,4 +8,5 @@
 
 <svelte:head>
 	<title>{APPLICATION_TITLE}</title>
+	<meta name="description" content={DESCRIPTION} />
 </svelte:head>

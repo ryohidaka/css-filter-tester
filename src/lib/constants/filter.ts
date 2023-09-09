@@ -1,9 +1,4 @@
-// Import necessary types
 import type { Filter } from '$types';
-
-// Constants representing default values used in the application.
-export const DEFAULT_IMAGE_URL = 'https://source.unsplash.com/9IBqihqhuHc';
-export const APPLICATION_TITLE = 'CSS Filter Test';
 
 // Define an enum for filter modes
 export enum FilterMode {
@@ -14,8 +9,7 @@ export enum FilterMode {
 	HueRotate = 'hue-rotate',
 	Invert = 'invert',
 	Opacity = 'opacity',
-	Saturate = 'saturate',
-	Sepia = 'sepia'
+	Saturate = 'saturate'
 }
 
 // Define an enum for filter value units
@@ -83,13 +77,6 @@ export const FILTERS: Filter[] = [
 	},
 	{
 		mode: FilterMode.Saturate,
-		unit: FilterUnit.None,
-		min: 0,
-		max: 1,
-		step: FilterStep.Float
-	},
-	{
-		mode: FilterMode.Sepia,
 		unit: FilterUnit.None,
 		min: 0,
 		max: 1,

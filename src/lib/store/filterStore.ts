@@ -1,5 +1,5 @@
 // Import the 'FILTERS' constant from the '$constants' module.
-import { FILTERS } from '$constants';
+import { FILTERS } from '$constants/filter';
 
 // Import the 'Filter' type from the '$types' module.
 import type { Filter } from '$types';

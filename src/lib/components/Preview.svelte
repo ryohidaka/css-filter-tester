@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Import necessary constants, stores, and functions.
-	import { DEFAULT_IMAGE_URL } from '$constants';
+	import { DEFAULT_IMAGE_URL } from '$constants/config';
 	import { selectedFilter } from '$store/filterStore';
 	import { isDefaultImage, selectedImage } from '$store/imageStore';
 	import { sliderValue } from '$store/sliderStore';

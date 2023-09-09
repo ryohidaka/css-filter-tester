@@ -1,6 +1,6 @@
 <script lang="ts">
 	// Import necessary constants and stores.
-	import { FILTERS } from '$constants';
+	import { FILTERS } from '$constants/filter';
 	import { selectedFilter } from '$store/filterStore';
 	import type { Filter } from '$types';
 	import { capitalizeFirstLetter } from '../string';

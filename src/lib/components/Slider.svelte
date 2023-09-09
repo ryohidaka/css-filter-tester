@@ -5,7 +5,7 @@
 	// Store imports
 	import { selectedFilter } from '$store/filterStore';
 	import { sliderValue } from '$store/sliderStore';
-	import { FilterStep } from '$constants';
+	import { FilterStep } from '$constants/filter';
 
 	// Constants
 	const DEFAULT_MIN = 0;

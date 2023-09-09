@@ -8,5 +8,4 @@
 
 <svelte:head>
 	<title>{APPLICATION_TITLE}</title>
-	<html lang="en" />
 </svelte:head>

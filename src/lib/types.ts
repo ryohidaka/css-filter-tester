@@ -1,4 +1,4 @@
-import type { FilterMode, FilterUnit, FilterStep } from '$constants';
+import type { FilterMode, FilterStep, FilterUnit } from '$constants/filter';
 
 // Define the 'Filter' type, which represents filter configuration options.
 export type Filter =

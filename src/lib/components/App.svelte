@@ -1,6 +1,6 @@
 <!-- This is a Svelte component -->
 <script lang="ts">
-	import { APPLICATION_TITLE } from '$constants';
+	import { APPLICATION_TITLE } from '$constants/config';
 	import { selectedFilter } from '$store/filterStore';
 	import { capitalizeFirstLetter } from '../string';
 	import Code from './Code.svelte';

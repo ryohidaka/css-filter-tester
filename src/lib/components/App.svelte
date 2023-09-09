@@ -1,50 +1,30 @@
-<!-- This is a Svelte component -->
 <script lang="ts">
-	import { APPLICATION_TITLE } from '$constants/config';
-	import { selectedFilter } from '$store/filterStore';
-	import { capitalizeFirstLetter } from '../string';
+	// Import necessary constants and components.
+	import { FILTERS } from '$constants/filter';
 	import CanIUse from './CanIUse.svelte';
-	import Code from './Code.svelte';
+	import Container from './Container.svelte';
+	import Copyright from './Copyright.svelte';
 	import FilterSelector from './FilterSelector.svelte';
 	import ImageSelector from './ImageSelector.svelte';
-	import PreviewTable from './PreviewTable.svelte';
-	import Slider from './Slider.svelte';
-
-	// Initialize mode with an empty string
-	let mode = '';
-
-	// Compute the capitalized mode name from selectedFilter
-	$: {
-		mode = capitalizeFirstLetter($selectedFilter?.mode || '');
-	}
 </script>
-
-<svelte:head>
-	<title>{APPLICATION_TITLE}</title>
-	<html lang="en" />
-</svelte:head>
-
-<h1>{APPLICATION_TITLE}</h1>
-
-<!-- Display the capitalized mode name -->
-<h2>{mode}</h2>
 
 <!-- Filter Selector -->
 <FilterSelector />
 
-<div id="controller">
-	<!-- Image Selector -->
-	<ImageSelector />
+<!-- Image Selector -->
+<ImageSelector />
 
-	<!-- Slider -->
-	<Slider />
+<!-- Filters -->
+<section id="filters">
+	<h2>CSS Filters</h2>
 
-	<!-- Code Block -->
-	<Code />
-</div>
+	{#each FILTERS as filter}
+		<Container {filter} />
+	{/each}
 
-<!-- Preview -->
-<PreviewTable />
+	<!-- Copyright -->
+	<Copyright />
+</section>
 
 <!-- Can I Use -->
 <CanIUse />

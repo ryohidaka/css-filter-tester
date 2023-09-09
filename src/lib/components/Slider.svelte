@@ -1,52 +1,38 @@
 <script lang="ts">
-	// Svelte imports
+	import type { Filter } from '$types';
 	import { onMount } from 'svelte';
 
 	// Store imports
-	import { selectedFilter } from '$store/filterStore';
 	import { sliderValue } from '$store/sliderStore';
-	import { FilterStep } from '$constants/filter';
+	import {
+		SLIDER_DEFAULT_MAX,
+		SLIDER_DEFAULT_MIN,
+		SLIDER_DEFAULT_STEP,
+		SLIDER_DEFAULT_UNIT
+	} from '$constants/slider';
 
-	// Constants
-	const DEFAULT_MIN = 0;
-	const DEFAULT_MAX = 100;
-	const DEFAULT_UNIT = '';
-	const DEFAULT_STEP = FilterStep.Integer;
+	export let filter: Filter | null = null;
 
 	// Reactive variables
 	let value = $sliderValue;
-	let min = DEFAULT_MIN;
-	let max = DEFAULT_MAX;
-	let unit = DEFAULT_UNIT;
-	let step = DEFAULT_STEP;
+	let min = filter?.min || SLIDER_DEFAULT_MIN;
+	let max = filter?.max || SLIDER_DEFAULT_MAX;
+	let unit = filter?.unit || SLIDER_DEFAULT_UNIT;
+	let step = filter?.step || SLIDER_DEFAULT_STEP;
 
-	// Initialize the 'filter' variable with the current selected filter, and 'unit' with its unit.
-	let filter = $selectedFilter;
+	export let updateValue: (newValue: number) => void;
 
-	// Reactively update 'min', 'max', 'unit', and 'step' based on the selected filter's values.
-	$: {
-		filter = $selectedFilter;
-		min = filter?.min || min;
-		max = filter?.max || max;
-		unit = filter?.unit || DEFAULT_UNIT;
-		step = filter?.step ?? DEFAULT_STEP;
+	function handleChange(event: Event) {
+		const input = event.target as HTMLInputElement;
+		const newValue = parseFloat(input.value);
+		updateValue(newValue);
 	}
 
 	onMount(() => {
 		// Set the initial value for the slider.
 		value = filter?.default || (min + max) / 2;
-		sliderValue.set(value);
+		updateValue(value);
 	});
-
-	// Function to handle changes in the slider value.
-	function handleChange(event: Event) {
-		// Get the input element from the event target and parse its value.
-		const input = event.target as HTMLInputElement;
-		value = parseFloat(input.value);
-
-		// Update the 'sliderValue' store with the new value.
-		sliderValue.set(value);
-	}
 </script>
 
 <!-- Container for the slider and labels -->

@@ -11,7 +11,8 @@ export enum FilterMode {
 	Brightness = 'brightness',
 	Contrast = 'contrast',
 	Grayscale = 'grayscale',
-	HueRotate = 'hue-rotate'
+	HueRotate = 'hue-rotate',
+	Invert = 'invert'
 }
 
 // Define an enum for filter value units
@@ -62,6 +63,13 @@ export const FILTERS: Filter[] = [
 		unit: FilterUnit.Degrees,
 		min: 0,
 		max: 360
+	},
+	{
+		mode: FilterMode.Invert,
+		unit: FilterUnit.None,
+		min: 0,
+		max: 1,
+		step: FilterStep.Float
 	}
 ];
 

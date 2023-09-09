@@ -29,12 +29,16 @@
 	};
 </script>
 
-<form>
-	<!-- Input element for selecting an image file -->
-	<input type="file" accept="image/*" on:change={handleImageChange} />
+<section id="image-selector">
+	<h2>Select Image</h2>
 
-	{#if $selectedImage}
-		<!-- Button to clear the selected image -->
-		<button on:click={clearSelectedImage}>Clear</button>
-	{/if}
-</form>
+	<form>
+		<!-- Input element for selecting an image file -->
+		<input type="file" accept="image/*" on:change={handleImageChange} />
+
+		{#if $selectedImage}
+			<!-- Button to clear the selected image -->
+			<button on:click={clearSelectedImage}>Clear</button>
+		{/if}
+	</form>
+</section>

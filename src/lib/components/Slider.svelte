@@ -35,7 +35,7 @@
 	});
 </script>
 
-<div id="slider" class="flex flex-col items-start">
+<div id="slider">
 	<!-- Container for the slider and labels -->
 	<label for="large-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 		>Intensity</label

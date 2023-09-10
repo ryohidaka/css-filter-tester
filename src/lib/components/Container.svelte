@@ -25,7 +25,7 @@
 		<InnerLink mode={filter.mode} />
 	</h3>
 
-	<div id="controller">
+	<div id="controller" class="flex flex-col w-80 items-start">
 		<!-- Slider -->
 		<Slider {filter} {updateValue} />
 

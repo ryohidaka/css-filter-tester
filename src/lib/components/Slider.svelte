@@ -35,15 +35,28 @@
 	});
 </script>
 
-<!-- Container for the slider and labels -->
-<div>
-	<!-- Display the minimum and maximum value labels, along with the unit if available. -->
-	<span>{min}{unit}</span>
+<div id="slider" class="flex flex-col items-start">
+	<!-- Container for the slider and labels -->
+	<label for="large-range" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+		>Intensity</label
+	>
 
-	<!-- Create an input range slider that is bound to the 'value' variable with specified 'min', 'max', and 'step' values.
-	  Call the 'handleChange' function on input changes. -->
-	<input type="range" bind:value {min} {max} {step} on:input={handleChange} />
+	<div class="flex gap-1 items-center w-80">
+		<!-- Display the minimum and maximum value labels, along with the unit if available. -->
+		<span class="dark:text-white">{min}{unit}</span>
 
-	<!-- Display the maximum value label along with the unit if available. -->
-	<span>{max}{unit}</span>
+		<input
+			id="large-range"
+			type="range"
+			bind:value
+			{min}
+			{max}
+			{step}
+			on:input={handleChange}
+			class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700"
+		/>
+
+		<!-- Display the maximum value label along with the unit if available. -->
+		<span class="dark:text-white">{max}{unit}</span>
+	</div>
 </div>

@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	@apply text-gray-900 dark:text-white;
+}
+
+body {
+	@apply dark:bg-gray-900;
+
+	/**
+	 * Disable horizontal swiping
+	 * To prevent browser back judgment during slider operation
+	 */
+	overscroll-behavior-x: none;
+}
+
+.card {
+	@apply p-3 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 w-full;
+}
+
+.link {
+	@apply font-medium text-blue-600 dark:text-blue-500 hover:underline;
+}

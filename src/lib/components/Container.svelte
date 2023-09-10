@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Filter } from '$types';
 	import { getFilterString } from '../filter';
-	import { capitalizeFirstLetter } from '../string';
 	import Code from './Code.svelte';
+	import InnerLink from './InnerLink.svelte';
 	import Preview from './Preview.svelte';
 	import Slider from './Slider.svelte';
 
@@ -20,8 +20,10 @@
 	}
 </script>
 
-<section id={filter.mode}>
-	<h3>{capitalizeFirstLetter(filter.mode)}</h3>
+<section id={filter.mode} class="card flex flex-col gap-3">
+	<h3 class="text-3xl font-semibold whitespace-nowrap dark:text-white">
+		<InnerLink mode={filter.mode} />
+	</h3>
 
 	<div id="controller">
 		<!-- Slider -->
@@ -42,10 +44,10 @@
 		<tbody>
 			<tr>
 				<!-- Original Image Preview -->
-				<td><Preview /></td>
+				<td align="center"><Preview /></td>
 
 				<!-- Filtered Image Preview -->
-				<td><Preview filterStyle={filterString} /></td>
+				<td align="center"><Preview filterStyle={filterString} /></td>
 			</tr>
 		</tbody>
 	</table>

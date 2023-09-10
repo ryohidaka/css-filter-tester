@@ -9,12 +9,12 @@
 			<span>Photo by </span>
 			<a
 				href="https://unsplash.com/@greysonjoralemon?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-				>Greyson Joralemon</a
+				class="link">Greyson Joralemon</a
 			>
 			<span> on </span>
 			<a
 				href="https://unsplash.com/photos/9IBqihqhuHc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-				>Unsplash</a
+				class="link">Unsplash</a
 			>
 		</p>
 	</section>

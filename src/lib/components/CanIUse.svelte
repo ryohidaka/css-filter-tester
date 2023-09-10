@@ -1,5 +1,5 @@
-<section id="can-i-use">
-	<h2>Can I Use</h2>
+<section id="can-i-use" class="card flex flex-col gap-3">
+	<h2 class="text-2xl font-semibold whitespace-nowrap">Can I Use</h2>
 	<div>
 		<picture>
 			<source type="image/webp" srcset="https://caniuse.bitsofco.de/image/css-filters.webp" />
@@ -11,5 +11,5 @@
 		</picture>
 	</div>
 
-	<a href="https://caniuse.com/css-filters">https://caniuse.com/css-filters</a>
+	<a href="https://caniuse.com/css-filters" class="link">https://caniuse.com/css-filters</a>
 </section>

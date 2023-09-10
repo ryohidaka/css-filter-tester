@@ -5,7 +5,7 @@
 </script>
 
 <Header />
-<main>
+<main class="flex flex-col gap-6 p-3 max-w-screen-xl items-center mx-auto">
 	<slot />
 </main>
 <Footer />

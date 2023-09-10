@@ -15,9 +15,7 @@
 <ImageSelector />
 
 <!-- Filters -->
-<section id="filters">
-	<h2>CSS Filters</h2>
-
+<section id="filters" class="flex flex-col gap-6 w-full">
 	{#each FILTERS as filter}
 		<Container {filter} />
 	{/each}

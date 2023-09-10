@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { Filter } from '$types';
 	import { getFilterString } from '../filter';
-	import { capitalizeFirstLetter } from '../string';
 	import Code from './Code.svelte';
+	import InnerLink from './InnerLink.svelte';
 	import Preview from './Preview.svelte';
 	import Slider from './Slider.svelte';
 
@@ -22,7 +22,7 @@
 
 <section id={filter.mode} class="card flex flex-col gap-3">
 	<h3 class="text-3xl font-semibold whitespace-nowrap dark:text-white">
-		<a href="#{filter.mode}">{capitalizeFirstLetter(filter.mode)}</a>
+		<InnerLink mode={filter.mode} />
 	</h3>
 
 	<div id="controller">

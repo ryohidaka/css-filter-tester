@@ -8,6 +8,12 @@
 
 body {
 	@apply dark:bg-gray-900;
+
+	/**
+	 * Disable horizontal swiping
+	 * To prevent browser back judgment during slider operation
+	 */
+	overscroll-behavior-x: none;
 }
 
 .card {
